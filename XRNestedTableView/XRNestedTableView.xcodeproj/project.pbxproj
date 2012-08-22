@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3EB6D83115E5305500632476 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB6D83015E5305500632476 /* UIKit.framework */; };
+		3EB6D83315E5305500632476 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB6D83215E5305500632476 /* Foundation.framework */; };
+		3EB6D83515E5305500632476 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB6D83415E5305500632476 /* CoreGraphics.framework */; };
+		3EB6D83B15E5305500632476 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EB6D83915E5305500632476 /* InfoPlist.strings */; };
+		3EB6D83D15E5305500632476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6D83C15E5305500632476 /* main.m */; };
+		3EB6D84115E5305500632476 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6D84015E5305500632476 /* AppDelegate.m */; };
+		3EB6D85D15E5306E00632476 /* SuperTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6D85215E5306E00632476 /* SuperTableViewController.m */; };
+		3EB6D85E15E5306E00632476 /* SuperTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EB6D85315E5306E00632476 /* SuperTableViewController.xib */; };
+		3EB6D85F15E5306E00632476 /* SuperCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6D85515E5306E00632476 /* SuperCell.m */; };
+		3EB6D86015E5306E00632476 /* SuperCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EB6D85615E5306E00632476 /* SuperCell.xib */; };
+		3EB6D86115E5306E00632476 /* SecondLevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6D85815E5306E00632476 /* SecondLevelCell.m */; };
+		3EB6D86215E5306E00632476 /* SecondLevelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EB6D85915E5306E00632476 /* SecondLevelCell.xib */; };
+		3EB6D86315E5306E00632476 /* ThirdLevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6D85B15E5306E00632476 /* ThirdLevelCell.m */; };
+		3EB6D86415E5306E00632476 /* ThirdLevelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EB6D85C15E5306E00632476 /* ThirdLevelCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3EB6D82C15E5305500632476 /* XRNestedTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XRNestedTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EB6D83015E5305500632476 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3EB6D83215E5305500632476 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3EB6D83415E5305500632476 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3EB6D83815E5305500632476 /* XRNestedTableView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XRNestedTableView-Info.plist"; sourceTree = "<group>"; };
+		3EB6D83A15E5305500632476 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3EB6D83C15E5305500632476 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3EB6D83E15E5305500632476 /* XRNestedTableView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XRNestedTableView-Prefix.pch"; sourceTree = "<group>"; };
+		3EB6D83F15E5305500632476 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3EB6D84015E5305500632476 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3EB6D85115E5306E00632476 /* SuperTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperTableViewController.h; sourceTree = "<group>"; };
+		3EB6D85215E5306E00632476 /* SuperTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperTableViewController.m; sourceTree = "<group>"; };
+		3EB6D85315E5306E00632476 /* SuperTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuperTableViewController.xib; sourceTree = "<group>"; };
+		3EB6D85415E5306E00632476 /* SuperCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperCell.h; sourceTree = "<group>"; };
+		3EB6D85515E5306E00632476 /* SuperCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperCell.m; sourceTree = "<group>"; };
+		3EB6D85615E5306E00632476 /* SuperCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuperCell.xib; sourceTree = "<group>"; };
+		3EB6D85715E5306E00632476 /* SecondLevelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondLevelCell.h; sourceTree = "<group>"; };
+		3EB6D85815E5306E00632476 /* SecondLevelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondLevelCell.m; sourceTree = "<group>"; };
+		3EB6D85915E5306E00632476 /* SecondLevelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondLevelCell.xib; sourceTree = "<group>"; };
+		3EB6D85A15E5306E00632476 /* ThirdLevelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdLevelCell.h; sourceTree = "<group>"; };
+		3EB6D85B15E5306E00632476 /* ThirdLevelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdLevelCell.m; sourceTree = "<group>"; };
+		3EB6D85C15E5306E00632476 /* ThirdLevelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdLevelCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EB6D82915E5305500632476 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB6D83115E5305500632476 /* UIKit.framework in Frameworks */,
+				3EB6D83315E5305500632476 /* Foundation.framework in Frameworks */,
+				3EB6D83515E5305500632476 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3EB6D82115E5305500632476 = {
+			isa = PBXGroup;
+			children = (
+				3EB6D83615E5305500632476 /* XRNestedTableView */,
+				3EB6D82F15E5305500632476 /* Frameworks */,
+				3EB6D82D15E5305500632476 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3EB6D82D15E5305500632476 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EB6D82C15E5305500632476 /* XRNestedTableView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EB6D82F15E5305500632476 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EB6D83015E5305500632476 /* UIKit.framework */,
+				3EB6D83215E5305500632476 /* Foundation.framework */,
+				3EB6D83415E5305500632476 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3EB6D83615E5305500632476 /* XRNestedTableView */ = {
+			isa = PBXGroup;
+			children = (
+				3EB6D83F15E5305500632476 /* AppDelegate.h */,
+				3EB6D84015E5305500632476 /* AppDelegate.m */,
+				3EB6D85115E5306E00632476 /* SuperTableViewController.h */,
+				3EB6D85215E5306E00632476 /* SuperTableViewController.m */,
+				3EB6D85315E5306E00632476 /* SuperTableViewController.xib */,
+				3EB6D85415E5306E00632476 /* SuperCell.h */,
+				3EB6D85515E5306E00632476 /* SuperCell.m */,
+				3EB6D85615E5306E00632476 /* SuperCell.xib */,
+				3EB6D85715E5306E00632476 /* SecondLevelCell.h */,
+				3EB6D85815E5306E00632476 /* SecondLevelCell.m */,
+				3EB6D85915E5306E00632476 /* SecondLevelCell.xib */,
+				3EB6D85A15E5306E00632476 /* ThirdLevelCell.h */,
+				3EB6D85B15E5306E00632476 /* ThirdLevelCell.m */,
+				3EB6D85C15E5306E00632476 /* ThirdLevelCell.xib */,
+				3EB6D83715E5305500632476 /* Supporting Files */,
+			);
+			path = XRNestedTableView;
+			sourceTree = "<group>";
+		};
+		3EB6D83715E5305500632476 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EB6D83815E5305500632476 /* XRNestedTableView-Info.plist */,
+				3EB6D83915E5305500632476 /* InfoPlist.strings */,
+				3EB6D83C15E5305500632476 /* main.m */,
+				3EB6D83E15E5305500632476 /* XRNestedTableView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3EB6D82B15E5305500632476 /* XRNestedTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EB6D84D15E5305500632476 /* Build configuration list for PBXNativeTarget "XRNestedTableView" */;
+			buildPhases = (
+				3EB6D82815E5305500632476 /* Sources */,
+				3EB6D82915E5305500632476 /* Frameworks */,
+				3EB6D82A15E5305500632476 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XRNestedTableView;
+			productName = XRNestedTableView;
+			productReference = 3EB6D82C15E5305500632476 /* XRNestedTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EB6D82315E5305500632476 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Xinrui Gao";
+			};
+			buildConfigurationList = 3EB6D82615E5305500632476 /* Build configuration list for PBXProject "XRNestedTableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3EB6D82115E5305500632476;
+			productRefGroup = 3EB6D82D15E5305500632476 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EB6D82B15E5305500632476 /* XRNestedTableView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EB6D82A15E5305500632476 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB6D83B15E5305500632476 /* InfoPlist.strings in Resources */,
+				3EB6D85E15E5306E00632476 /* SuperTableViewController.xib in Resources */,
+				3EB6D86015E5306E00632476 /* SuperCell.xib in Resources */,
+				3EB6D86215E5306E00632476 /* SecondLevelCell.xib in Resources */,
+				3EB6D86415E5306E00632476 /* ThirdLevelCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EB6D82815E5305500632476 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB6D83D15E5305500632476 /* main.m in Sources */,
+				3EB6D84115E5305500632476 /* AppDelegate.m in Sources */,
+				3EB6D85D15E5306E00632476 /* SuperTableViewController.m in Sources */,
+				3EB6D85F15E5306E00632476 /* SuperCell.m in Sources */,
+				3EB6D86115E5306E00632476 /* SecondLevelCell.m in Sources */,
+				3EB6D86315E5306E00632476 /* ThirdLevelCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3EB6D83915E5305500632476 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EB6D83A15E5305500632476 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3EB6D84B15E5305500632476 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3EB6D84C15E5305500632476 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3EB6D84E15E5305500632476 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XRNestedTableView/XRNestedTableView-Prefix.pch";
+				INFOPLIST_FILE = "XRNestedTableView/XRNestedTableView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3EB6D84F15E5305500632476 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XRNestedTableView/XRNestedTableView-Prefix.pch";
+				INFOPLIST_FILE = "XRNestedTableView/XRNestedTableView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EB6D82615E5305500632476 /* Build configuration list for PBXProject "XRNestedTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EB6D84B15E5305500632476 /* Debug */,
+				3EB6D84C15E5305500632476 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EB6D84D15E5305500632476 /* Build configuration list for PBXNativeTarget "XRNestedTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EB6D84E15E5305500632476 /* Debug */,
+				3EB6D84F15E5305500632476 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3EB6D82315E5305500632476 /* Project object */;
+}
