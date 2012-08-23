@@ -1,4 +1,4 @@
 XRNestedTableView
 =================
 
-just a try
+A simple 3-level nested table view
