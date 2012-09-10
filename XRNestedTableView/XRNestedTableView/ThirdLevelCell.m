@@ -9,6 +9,7 @@
 #import "ThirdLevelCell.h"
 
 @implementation ThirdLevelCell
+@synthesize label;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

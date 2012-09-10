@@ -16,9 +16,9 @@
 @end
 
 static const int superHeight = 50;
-static const int subGroupCellHeight = 50;
+static const int subGroupCellHeight = 40;
 
-@interface SuperCell : UITableViewCell <UITableViewDataSource, UITableViewDelegate>{
+@interface FirstLevelCell : UITableViewCell <UITableViewDataSource, UITableViewDelegate>{
   NSMutableDictionary *expandedIndexes;
 }
 
@@ -27,6 +27,7 @@ static const int subGroupCellHeight = 50;
 @property (strong, nonatomic) IBOutlet SecondLevelCell *secondCell;
 
 @property (strong, nonatomic) NSMutableDictionary *expandedIndexes;
+@property (nonatomic) NSInteger numberOfSections, numberOfRowsInSection, numberOfSectionsForNextLevel, numberOfRowsInSectionForNextLevel;
 
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *label;
 @property (strong, nonatomic) IBOutlet UITableView *superTableView;

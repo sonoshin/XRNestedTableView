@@ -6,10 +6,10 @@
 //
 //
 
-#import "SuperCell.h"
+#import "FirstLevelCell.h"
 
-@implementation SuperCell
-@synthesize expandedIndexes;
+@implementation FirstLevelCell
+@synthesize expandedIndexes, numberOfRowsInSection, numberOfSections, numberOfRowsInSectionForNextLevel, numberOfSectionsForNextLevel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -43,13 +43,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
   // Return the number of sections.
-  return 1;
+  return self.numberOfSections;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   // Return the number of rows in the section.
-  return 4;
+  return self.numberOfRowsInSection;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -59,6 +59,13 @@
   if (cell == nil)
   {
     [[NSBundle mainBundle] loadNibNamed:@"SecondLevelCell" owner:self options:nil];
+    
+    //data source
+    self.secondCell.numberOfSections = self.numberOfSectionsForNextLevel;
+    self.secondCell.numberOfRowsInSection = self.numberOfRowsInSectionForNextLevel;
+    
+    self.secondCell.label.text = @"Level 2 cell";
+    
     cell = self.secondCell;
     self.secondCell = nil;
   }
@@ -71,8 +78,8 @@
   BOOL isExpanded = [[expandedIndexes objectForKey:indexPath] boolValue];
   if(isExpanded)
   {
-    [self.delegate updateTableHeightWithDiff:([SecondLevelCell getsubCellHeight]*3 + 1)];
-    return [SecondLevelCell getHeight] + [SecondLevelCell getsubCellHeight]*3 + 1;
+    [self.delegate updateTableHeightWithDiff:([SecondLevelCell getsubCellHeight]*self.numberOfRowsInSectionForNextLevel)];
+    return [SecondLevelCell getHeight] + [SecondLevelCell getsubCellHeight]*self.numberOfRowsInSectionForNextLevel;
   }
   return [SecondLevelCell getHeight];
 }

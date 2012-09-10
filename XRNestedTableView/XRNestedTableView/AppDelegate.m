@@ -17,6 +17,13 @@
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   
   SuperTableViewController *superNav = [[SuperTableViewController alloc] init];
+  superNav.firstLevelSectionNumber = 1;
+  superNav.firstLevelRowsForSection = 10;
+  superNav.secondLevelSectionNumber = 1;
+  superNav.secondLevelRowsForSection = 6;
+  superNav.thirdLevelSectionNumber = 1;
+  superNav.thirdLevelRowsForSection = 2;
+  
   self.window.rootViewController = superNav;
   
   [self.window makeKeyAndVisible];

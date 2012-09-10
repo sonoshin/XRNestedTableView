@@ -48,7 +48,7 @@
 									<object class="IBUILabel" id="22410706">
 										<reference key="NSNextResponder" ref="558265381"/>
 										<int key="NSvFlags">292</int>
-										<string key="NSFrame">{{28, 14}, {238, 21}}</string>
+										<string key="NSFrame">{{28, 9}, {238, 21}}</string>
 										<reference key="NSSuperview" ref="558265381"/>
 										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="241100545"/>
@@ -77,7 +77,7 @@
 										</object>
 									</object>
 								</array>
-								<string key="NSFrameSize">{320, 50}</string>
+								<string key="NSFrameSize">{320, 40}</string>
 								<reference key="NSSuperview" ref="492096013"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="22410706"/>
@@ -91,7 +91,7 @@
 							<object class="IBUITableView" id="241100545">
 								<reference key="NSNextResponder" ref="492096013"/>
 								<int key="NSvFlags">274</int>
-								<string key="NSFrame">{{0, 49}, {320, 146}}</string>
+								<string key="NSFrame">{{0, 40}, {320, 155}}</string>
 								<reference key="NSSuperview" ref="492096013"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView"/>
@@ -103,7 +103,7 @@
 								<int key="IBUISeparatorStyle">1</int>
 								<int key="IBUISectionIndexMinimumDisplayRowCount">0</int>
 								<bool key="IBUIShowsSelectionImmediatelyOnTouchBegin">YES</bool>
-								<float key="IBUIRowHeight">44</float>
+								<float key="IBUIRowHeight">30</float>
 								<float key="IBUISectionHeaderHeight">22</float>
 								<float key="IBUISectionFooterHeight">22</float>
 							</object>
@@ -232,7 +232,7 @@
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
-				<string key="-1.CustomClassName">SuperCell</string>
+				<string key="-1.CustomClassName">FirstLevelCell</string>
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -250,6 +250,33 @@
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">FirstLevelCell</string>
+					<string key="superclassName">UITableViewCell</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="label">UILabel</string>
+						<string key="secondCell">SecondLevelCell</string>
+						<string key="superTableView">UITableView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="label">
+							<string key="name">label</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="secondCell">
+							<string key="name">secondCell</string>
+							<string key="candidateClassName">SecondLevelCell</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="superTableView">
+							<string key="name">superTableView</string>
+							<string key="candidateClassName">UITableView</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/FirstLevelCell.h</string>
+					</object>
+				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">SecondLevelCell</string>
 					<string key="superclassName">UITableViewCell</string>
@@ -275,33 +302,6 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/SecondLevelCell.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">SuperCell</string>
-					<string key="superclassName">UITableViewCell</string>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="label">UILabel</string>
-						<string key="secondCell">SecondLevelCell</string>
-						<string key="superTableView">UITableView</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="label">
-							<string key="name">label</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="secondCell">
-							<string key="name">secondCell</string>
-							<string key="candidateClassName">SecondLevelCell</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="superTableView">
-							<string key="name">superTableView</string>
-							<string key="candidateClassName">UITableView</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/SuperCell.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SuperCell.h"
+#import "FirstLevelCell.h"
 
 @interface SuperTableViewController : UITableViewController <UpdateTableHeight>
 
-@property (strong, nonatomic) IBOutlet SuperCell *superCell;
+@property (strong, nonatomic) IBOutlet FirstLevelCell *superCell;
+
+@property (nonatomic) NSInteger firstLevelSectionNumber, firstLevelRowsForSection;
+@property (nonatomic) NSInteger secondLevelSectionNumber, secondLevelRowsForSection;
+@property (nonatomic) NSInteger thirdLevelSectionNumber, thirdLevelRowsForSection;
 
 @end

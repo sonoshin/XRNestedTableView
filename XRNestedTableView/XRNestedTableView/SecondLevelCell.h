@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "ThirdLevelCell.h"
 
-static const int theHeight = 50;
-static const int theSubCellHeight = 50;
+static const int theHeight = 40;
+static const int theSubCellHeight = 30;
 
 @interface SecondLevelCell : UITableViewCell <UITableViewDataSource, UITableViewDelegate>
 
@@ -18,6 +18,8 @@ static const int theSubCellHeight = 50;
 
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *label;
 @property (unsafe_unretained, nonatomic) IBOutlet UITableView *subTableView;
+
+@property (nonatomic) NSInteger numberOfSections, numberOfRowsInSection;
 
 + (int) getHeight;
 + (int) getsubCellHeight;

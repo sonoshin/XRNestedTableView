@@ -9,6 +9,7 @@
 #import "SecondLevelCell.h"
 
 @implementation SecondLevelCell
+@synthesize numberOfSections, numberOfRowsInSection;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -34,13 +35,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
   // Return the number of sections.
-  return 1;
+  return self.numberOfSections;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   // Return the number of rows in the section.
-  return 3;
+  return self.numberOfRowsInSection;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -50,6 +51,9 @@
   if (cell == nil)
   {
     [[NSBundle mainBundle] loadNibNamed:@"ThirdLevelCell" owner:self options:nil];
+    
+    self.thirdCell.label.text = @"Level 3 cell";
+    
     cell = self.thirdCell;
     self.thirdCell = nil;
   }
