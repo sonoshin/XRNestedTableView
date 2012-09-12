@@ -21,9 +21,11 @@
   NSArray *dataLv301 = [NSArray arrayWithObjects:@"Lv3011", @"Lv3012", @"Lv3013", nil];
   NSArray *dataLv302 = [NSArray arrayWithObjects:@"Lv3021", @"Lv3022", @"Lv3023", nil];
   NSArray *dataLv303 = [NSArray arrayWithObjects:@"Lv3031", @"Lv3032", @"Lv3033", nil];
-  NSArray *dataLv201 = [NSArray arrayWithObjects:dataLv301, dataLv302, dataLv303, nil];
+  NSArray *dataLv201 = [NSArray arrayWithObjects:dataLv301, dataLv302, dataLv303, @"test", nil];
   NSArray *dataLv202 = [NSArray arrayWithObjects:dataLv301, dataLv302, nil];
-  NSArray *dataLv101 = [NSArray arrayWithObjects:dataLv201, dataLv202, dataLv201, dataLv202, dataLv201, dataLv202, nil];
+  NSArray *dataLv203 = [NSArray arrayWithObjects:dataLv301, dataLv302, @"test", nil];
+  NSArray *dataLv204 = [NSArray arrayWithObjects:dataLv301, @"test", nil];
+  NSArray *dataLv101 = [NSArray arrayWithObjects:dataLv201, dataLv202, dataLv203, dataLv204, dataLv201, @"test", dataLv202, nil];
   
   superNav.dataSource = dataLv101;
   

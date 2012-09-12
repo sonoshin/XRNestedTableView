@@ -31,7 +31,7 @@ static const int subGroupCellHeight = 40;
 @property (strong, nonatomic) NSArray *dataSource;
 
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *label;
-@property (strong, nonatomic) IBOutlet UITableView *superTableView;
+@property (strong, nonatomic) IBOutlet UITableView *subTableView;
 
 + (int) getHeight;
 + (int) getsubCellHeight;

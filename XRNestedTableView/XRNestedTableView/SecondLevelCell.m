@@ -40,7 +40,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   // Return the number of rows in the section.
-  return self.dataSource.count;
+  if ([self.dataSource isKindOfClass:[NSArray class]]) {
+    return self.dataSource.count;
+  }else{
+    return 0;
+  }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -51,7 +55,11 @@
   {
     [[NSBundle mainBundle] loadNibNamed:@"ThirdLevelCell" owner:self options:nil];
     
-    self.thirdCell.label.text = [self.dataSource objectAtIndex:indexPath.row];
+    if ([self.dataSource isKindOfClass:[NSArray class]]) {
+      self.thirdCell.label.text = [self.dataSource objectAtIndex:indexPath.row];
+    }else if ([self.dataSource isKindOfClass:[NSString class]]){
+      self.thirdCell.label.text = (NSString *)self.dataSource;
+    }
     
     cell = self.thirdCell;
     self.thirdCell = nil;

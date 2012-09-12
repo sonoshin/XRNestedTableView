@@ -24,7 +24,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   // Return the number of rows in the section.
-  return self.dataSource.count;
+  if ([self.dataSource isKindOfClass:[NSArray class]]) {
+    return self.dataSource.count;
+  }else{
+    return 0;
+  }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -40,9 +44,10 @@
                                                  name:@"MainTableViewCellDidSelect"
                                                object:nil];
     //data source
-    self.firstLevelCell.dataSource = [self.dataSource objectAtIndex:indexPath.row];
-    
-    self.firstLevelCell.label.text = @"Level 1 cell";
+    if ([self.dataSource isKindOfClass:[NSArray class]]) {
+      self.firstLevelCell.dataSource = [self.dataSource objectAtIndex:indexPath.row];
+      self.firstLevelCell.label.text = [NSString stringWithFormat:@"Level 1 cell %d", indexPath.row];
+    }
     
     cell = self.firstLevelCell;
     self.firstLevelCell = nil;
@@ -55,8 +60,15 @@
   if (!expandedStatus) {
     expandedStatus = [[NSMutableDictionary alloc] init];
   }
+  
+  BOOL hasChild = NO;
+  if ([[self.dataSource objectAtIndex:indexPath.row] isKindOfClass:[NSArray class]]
+      && [[self.dataSource objectAtIndex:indexPath.row] count] > 1) {
+    hasChild = YES;
+  }
+  
   BOOL isExpanded = [[expandedStatus objectForKey:indexPath] boolValue];
-  if(isExpanded)
+  if(hasChild && isExpanded)
   {
     if (needExpandAgain) {
       needExpandAgain = NO;
@@ -74,6 +86,17 @@
   NSLog(@"Level 1: Row %d has been tapped", indexPath.row);
   if ( indexPath == nil )
     return;
+  
+  if (!([[self.dataSource objectAtIndex:indexPath.row] isKindOfClass:[NSArray class]]
+        && [[self.dataSource objectAtIndex:indexPath.row] count] > 1)) {
+    [expandedStatus removeAllObjects];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"MainTableViewCellDidSelect" object:nil];
+    [tableView beginUpdates];
+    [tableView endUpdates];
+    NSLog(@"Level 2: Row %d has been selected", indexPath.row);
+    return;
+  }
+  
   expandDiff = 0;
 	BOOL isExpanded = ![[expandedStatus objectForKey:indexPath] boolValue];
 	NSNumber *expandedIndex = [NSNumber numberWithBool:isExpanded];
@@ -82,8 +105,8 @@
   
   [[NSNotificationCenter defaultCenter] postNotificationName:@"MainTableViewCellDidSelect" object:nil];
   
-  [self.tableView beginUpdates];
-  [self.tableView endUpdates];
+  [tableView beginUpdates];
+  [tableView endUpdates];
 }
 
 - (void)updateTableHeightWithDiff:(CGFloat)diff {

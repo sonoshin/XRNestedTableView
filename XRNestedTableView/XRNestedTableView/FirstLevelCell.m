@@ -9,7 +9,6 @@
 #import "FirstLevelCell.h"
 
 @implementation FirstLevelCell
-@synthesize expandedIndexes;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -34,8 +33,8 @@
 - (void) updateTable
 {
   [expandedIndexes removeAllObjects];
-  [self.superTableView beginUpdates];
-  [self.superTableView endUpdates];
+  [self.subTableView beginUpdates];
+  [self.subTableView endUpdates];
 }
 
 #pragma mark - Table view data source
@@ -43,44 +42,57 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
   // Return the number of sections.
-  return 1;
+  if ([self.dataSource isKindOfClass:[NSArray class]]) {
+    return 1;
+  }else{
+    return 0;
+  }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   // Return the number of rows in the section.
-  return self.dataSource.count;
+  if ([self.dataSource isKindOfClass:[NSArray class]]) {
+    return self.dataSource.count;
+  }else{
+    return 0;
+  }
+  
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   SecondLevelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SecondLevelCell"];
-  
+
   if (cell == nil)
   {
     [[NSBundle mainBundle] loadNibNamed:@"SecondLevelCell" owner:self options:nil];
     
     //data source
-    self.secondCell.dataSource = [self.dataSource objectAtIndex:indexPath.row];
-    
-    self.secondCell.label.text = @"Level 2 cell";
-    
+    if ([self.dataSource isKindOfClass:[NSArray class]]) {
+      self.secondCell.dataSource = [self.dataSource objectAtIndex:indexPath.row];
+      self.secondCell.label.text = [NSString stringWithFormat:@"Level 2 cell %d", indexPath.row];
+    }
+     
     cell = self.secondCell;
     self.secondCell = nil;
   }
-  
   return cell;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+  BOOL hasChild = NO;
+  if ([[self.dataSource objectAtIndex:indexPath.row] isKindOfClass:[NSArray class]]
+      && [[self.dataSource objectAtIndex:indexPath.row] count] > 1) {
+    hasChild = YES;
+  }
   BOOL isExpanded = [[expandedIndexes objectForKey:indexPath] boolValue];
-  if(isExpanded)
+  //NSLog(@"Has child? %@ Is Expanded? %@", hasChild?@"YES":@"NO", isExpanded?@"YES":@"NO");
+  
+  if(hasChild && isExpanded)
   {
-    NSInteger indexRow = indexPath.row; //important and necessary, because after the next updateTableHeightWithDiff method, indexPath.row changed!!!!!
-    [self.delegate updateTableHeightWithDiff:([SecondLevelCell getsubCellHeight]*[[self.dataSource objectAtIndex:indexPath.row] count])];
-    //NSLog(@"Print indexpath: %d", indexPath.row);
-    return [SecondLevelCell getHeight]+[SecondLevelCell getsubCellHeight]*[[self.dataSource objectAtIndex:indexRow] count];
+    return [SecondLevelCell getHeight]+[SecondLevelCell getsubCellHeight]*[[self.dataSource objectAtIndex:indexPath.row] count];
   }else {
     return [SecondLevelCell getHeight];
   }
@@ -91,12 +103,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   NSLog(@"Level 2: Row %d has been tapped", indexPath.row);
+  
   if ( indexPath == nil )
     return;
+  
+  if (!([[self.dataSource objectAtIndex:indexPath.row] isKindOfClass:[NSArray class]]
+      && [[self.dataSource objectAtIndex:indexPath.row] count] > 1)) {
+    [expandedIndexes removeAllObjects];
+    [self.delegate updateTableHeightWithDiff:0];
+    [tableView beginUpdates];
+    [tableView endUpdates];
+    NSLog(@"Level 2: Row %d has been selected", indexPath.row);
+    return;
+  }
   
   if (!expandedIndexes) {
     expandedIndexes = [[NSMutableDictionary alloc] init];
   }
+  NSLog(@"Level 2: IndexPath %@ has been selected", indexPath);
   
 	BOOL isExpanded = ![[expandedIndexes objectForKey:indexPath] boolValue];
 	NSNumber *expandedIndex = [NSNumber numberWithBool:isExpanded];
@@ -105,9 +129,12 @@
 
   if (!isExpanded) {
     [self.delegate updateTableHeightWithDiff:0];
+  }else {
+    [self.delegate updateTableHeightWithDiff:([SecondLevelCell getsubCellHeight]*[[self.dataSource objectAtIndex:indexPath.row] count])];
   }
-  [self.superTableView beginUpdates];
-  [self.superTableView endUpdates];
+  [tableView beginUpdates];
+  [tableView endUpdates];
+  
 }
 
 @end
