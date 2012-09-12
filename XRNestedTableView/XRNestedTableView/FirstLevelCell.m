@@ -9,7 +9,7 @@
 #import "FirstLevelCell.h"
 
 @implementation FirstLevelCell
-@synthesize expandedIndexes, numberOfRowsInSection, numberOfSections, numberOfRowsInSectionForNextLevel, numberOfSectionsForNextLevel;
+@synthesize expandedIndexes;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -43,13 +43,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
   // Return the number of sections.
-  return self.numberOfSections;
+  return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   // Return the number of rows in the section.
-  return self.numberOfRowsInSection;
+  return self.dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,8 +61,7 @@
     [[NSBundle mainBundle] loadNibNamed:@"SecondLevelCell" owner:self options:nil];
     
     //data source
-    self.secondCell.numberOfSections = self.numberOfSectionsForNextLevel;
-    self.secondCell.numberOfRowsInSection = self.numberOfRowsInSectionForNextLevel;
+    self.secondCell.dataSource = [self.dataSource objectAtIndex:indexPath.row];
     
     self.secondCell.label.text = @"Level 2 cell";
     
@@ -78,17 +77,20 @@
   BOOL isExpanded = [[expandedIndexes objectForKey:indexPath] boolValue];
   if(isExpanded)
   {
-    [self.delegate updateTableHeightWithDiff:([SecondLevelCell getsubCellHeight]*self.numberOfRowsInSectionForNextLevel)];
-    return [SecondLevelCell getHeight] + [SecondLevelCell getsubCellHeight]*self.numberOfRowsInSectionForNextLevel;
+    NSInteger indexRow = indexPath.row; //important and necessary, because after the next updateTableHeightWithDiff method, indexPath.row changed!!!!!
+    [self.delegate updateTableHeightWithDiff:([SecondLevelCell getsubCellHeight]*[[self.dataSource objectAtIndex:indexPath.row] count])];
+    //NSLog(@"Print indexpath: %d", indexPath.row);
+    return [SecondLevelCell getHeight]+[SecondLevelCell getsubCellHeight]*[[self.dataSource objectAtIndex:indexRow] count];
+  }else {
+    return [SecondLevelCell getHeight];
   }
-  return [SecondLevelCell getHeight];
 }
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  
+  NSLog(@"Level 2: Row %d has been tapped", indexPath.row);
   if ( indexPath == nil )
     return;
   

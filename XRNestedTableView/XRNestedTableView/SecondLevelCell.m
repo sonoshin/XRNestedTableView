@@ -9,7 +9,6 @@
 #import "SecondLevelCell.h"
 
 @implementation SecondLevelCell
-@synthesize numberOfSections, numberOfRowsInSection;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -35,13 +34,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
   // Return the number of sections.
-  return self.numberOfSections;
+  return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   // Return the number of rows in the section.
-  return self.numberOfRowsInSection;
+  return self.dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -52,13 +51,18 @@
   {
     [[NSBundle mainBundle] loadNibNamed:@"ThirdLevelCell" owner:self options:nil];
     
-    self.thirdCell.label.text = @"Level 3 cell";
+    self.thirdCell.label.text = [self.dataSource objectAtIndex:indexPath.row];
     
     cell = self.thirdCell;
     self.thirdCell = nil;
   }
   
   return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  NSLog(@"Level 3: Row %d has been tapped", indexPath.row);
 }
 
 @end

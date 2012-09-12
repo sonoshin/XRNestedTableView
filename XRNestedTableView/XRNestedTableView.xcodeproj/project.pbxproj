@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E7066B815FFA8D300CA8660 /* XRNestedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7066B715FFA8D300CA8660 /* XRNestedTableViewController.m */; };
 		3EB6D83115E5305500632476 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB6D83015E5305500632476 /* UIKit.framework */; };
 		3EB6D83315E5305500632476 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB6D83215E5305500632476 /* Foundation.framework */; };
 		3EB6D83515E5305500632476 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB6D83415E5305500632476 /* CoreGraphics.framework */; };
 		3EB6D83B15E5305500632476 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EB6D83915E5305500632476 /* InfoPlist.strings */; };
 		3EB6D83D15E5305500632476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6D83C15E5305500632476 /* main.m */; };
 		3EB6D84115E5305500632476 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6D84015E5305500632476 /* AppDelegate.m */; };
-		3EB6D85D15E5306E00632476 /* SuperTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6D85215E5306E00632476 /* SuperTableViewController.m */; };
-		3EB6D85E15E5306E00632476 /* SuperTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EB6D85315E5306E00632476 /* SuperTableViewController.xib */; };
+		3EB6D85D15E5306E00632476 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6D85215E5306E00632476 /* TestViewController.m */; };
+		3EB6D85E15E5306E00632476 /* XRNestedTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EB6D85315E5306E00632476 /* XRNestedTableViewController.xib */; };
 		3EB6D85F15E5306E00632476 /* FirstLevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6D85515E5306E00632476 /* FirstLevelCell.m */; };
 		3EB6D86015E5306E00632476 /* FirstLevelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EB6D85615E5306E00632476 /* FirstLevelCell.xib */; };
 		3EB6D86115E5306E00632476 /* SecondLevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6D85815E5306E00632476 /* SecondLevelCell.m */; };
@@ -24,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E7066B615FFA8D300CA8660 /* XRNestedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRNestedTableViewController.h; sourceTree = "<group>"; };
+		3E7066B715FFA8D300CA8660 /* XRNestedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRNestedTableViewController.m; sourceTree = "<group>"; };
+		3E7066B915FFAA6900CA8660 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		3EB6D82C15E5305500632476 /* XRNestedTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XRNestedTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EB6D83015E5305500632476 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3EB6D83215E5305500632476 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -34,9 +38,8 @@
 		3EB6D83E15E5305500632476 /* XRNestedTableView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XRNestedTableView-Prefix.pch"; sourceTree = "<group>"; };
 		3EB6D83F15E5305500632476 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3EB6D84015E5305500632476 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3EB6D85115E5306E00632476 /* SuperTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperTableViewController.h; sourceTree = "<group>"; };
-		3EB6D85215E5306E00632476 /* SuperTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperTableViewController.m; sourceTree = "<group>"; };
-		3EB6D85315E5306E00632476 /* SuperTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuperTableViewController.xib; sourceTree = "<group>"; };
+		3EB6D85215E5306E00632476 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		3EB6D85315E5306E00632476 /* XRNestedTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XRNestedTableViewController.xib; sourceTree = "<group>"; };
 		3EB6D85415E5306E00632476 /* FirstLevelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLevelCell.h; sourceTree = "<group>"; };
 		3EB6D85515E5306E00632476 /* FirstLevelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLevelCell.m; sourceTree = "<group>"; };
 		3EB6D85615E5306E00632476 /* FirstLevelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstLevelCell.xib; sourceTree = "<group>"; };
@@ -94,9 +97,11 @@
 			children = (
 				3EB6D83F15E5305500632476 /* AppDelegate.h */,
 				3EB6D84015E5305500632476 /* AppDelegate.m */,
-				3EB6D85115E5306E00632476 /* SuperTableViewController.h */,
-				3EB6D85215E5306E00632476 /* SuperTableViewController.m */,
-				3EB6D85315E5306E00632476 /* SuperTableViewController.xib */,
+				3E7066B915FFAA6900CA8660 /* TestViewController.h */,
+				3EB6D85215E5306E00632476 /* TestViewController.m */,
+				3E7066B615FFA8D300CA8660 /* XRNestedTableViewController.h */,
+				3E7066B715FFA8D300CA8660 /* XRNestedTableViewController.m */,
+				3EB6D85315E5306E00632476 /* XRNestedTableViewController.xib */,
 				3EB6D85415E5306E00632476 /* FirstLevelCell.h */,
 				3EB6D85515E5306E00632476 /* FirstLevelCell.m */,
 				3EB6D85615E5306E00632476 /* FirstLevelCell.xib */,
@@ -174,7 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EB6D83B15E5305500632476 /* InfoPlist.strings in Resources */,
-				3EB6D85E15E5306E00632476 /* SuperTableViewController.xib in Resources */,
+				3EB6D85E15E5306E00632476 /* XRNestedTableViewController.xib in Resources */,
 				3EB6D86015E5306E00632476 /* FirstLevelCell.xib in Resources */,
 				3EB6D86215E5306E00632476 /* SecondLevelCell.xib in Resources */,
 				3EB6D86415E5306E00632476 /* ThirdLevelCell.xib in Resources */,
@@ -190,10 +195,11 @@
 			files = (
 				3EB6D83D15E5305500632476 /* main.m in Sources */,
 				3EB6D84115E5305500632476 /* AppDelegate.m in Sources */,
-				3EB6D85D15E5306E00632476 /* SuperTableViewController.m in Sources */,
+				3EB6D85D15E5306E00632476 /* TestViewController.m in Sources */,
 				3EB6D85F15E5306E00632476 /* FirstLevelCell.m in Sources */,
 				3EB6D86115E5306E00632476 /* SecondLevelCell.m in Sources */,
 				3EB6D86315E5306E00632476 /* ThirdLevelCell.m in Sources */,
+				3E7066B815FFA8D300CA8660 /* XRNestedTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,7 @@ static const int theSubCellHeight = 30;
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *label;
 @property (unsafe_unretained, nonatomic) IBOutlet UITableView *subTableView;
 
-@property (nonatomic) NSInteger numberOfSections, numberOfRowsInSection;
+@property (strong, nonatomic) NSArray *dataSource;
 
 + (int) getHeight;
 + (int) getsubCellHeight;

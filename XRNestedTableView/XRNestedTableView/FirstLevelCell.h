@@ -27,7 +27,8 @@ static const int subGroupCellHeight = 40;
 @property (strong, nonatomic) IBOutlet SecondLevelCell *secondCell;
 
 @property (strong, nonatomic) NSMutableDictionary *expandedIndexes;
-@property (nonatomic) NSInteger numberOfSections, numberOfRowsInSection, numberOfSectionsForNextLevel, numberOfRowsInSectionForNextLevel;
+
+@property (strong, nonatomic) NSArray *dataSource;
 
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *label;
 @property (strong, nonatomic) IBOutlet UITableView *superTableView;
